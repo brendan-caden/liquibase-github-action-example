@@ -31,3 +31,14 @@ alter table person add column state varchar(2)
 --changeset other.dev:5
 --rollback ALTER TABLE company DROP COLUMN country;
 alter table company add column country varchar(2)
+
+--changeset other.dev:6
+--delete from company where id = 1;
+insert into company values (1,'Brendan Widdgets', 'Perry Lodge', 'Longnor', 'Shrewsbury');
+
+--changeset brendan:1
+--rollback DROP TABLE widgets;
+CREATE TABLE widgets (
+    id int primary key,
+    name varchar(50) not null
+)
