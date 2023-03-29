@@ -42,3 +42,7 @@ CREATE TABLE widgets (
     id int primary key,
     name varchar(50) not null
 )
+
+--changeset brendan:2
+--delete from widgets where id = 1;
+insert into widgets values (1, 'Best Widget');
