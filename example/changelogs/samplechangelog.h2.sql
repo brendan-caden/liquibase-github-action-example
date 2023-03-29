@@ -34,7 +34,7 @@ alter table company add column country varchar(2)
 
 --changeset other.dev:6
 --delete from company where id = 1;
-insert into company values (1,'Brendan Widdgets', 'Perry Lodge', 'Longnor', 'Shrewsbury');
+insert into company (id, name, address1, address2, city) values (1,'Brendan Widdgets', 'Perry Lodge', 'Longnor', 'Shrewsbury');
 
 --changeset brendan:1
 --rollback DROP TABLE widgets;
